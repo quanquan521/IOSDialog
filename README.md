@@ -11,8 +11,9 @@
 ![](IOSDialog/1.jpg) ![](IOSDialog/2.jpg)![](IOSDialog/3.jpg) ![](IOSDialog/4.jpg)
 
 > ### 使用
-
-   var  dialog= CommonViewDialog(this)
+  
+  
+      var  dialog= CommonViewDialog(this)
         dialog.setTitle("提示")
         dialog.setMessage("这是一个dialog！")
         dialog.setNegtive("取消")
