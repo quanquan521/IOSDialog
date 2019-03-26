@@ -8,4 +8,4 @@
 
 > ### 效果图
 
-![](IOSDialog/1.jpg) ![](2.jpg)![](3.jpg) ![](4.jpg)
+![](IOSDialog/1.jpg) ![](IOSDialog/2.jpg)![](IOSDialog/3.jpg) ![](IOSDialog/4.jpg)
