@@ -246,12 +246,6 @@ public class CommonViewDialog extends Dialog {
     public View getView() {
         return view;
     }
-
-    public Bottom isSingle() {
-        return style;
-    }
-
-
     public CommonViewDialog setSingle(Bottom b) {
         style = b;
         return this ;

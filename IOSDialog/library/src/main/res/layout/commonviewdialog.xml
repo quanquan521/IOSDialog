@@ -17,7 +17,6 @@
 
         </LinearLayout>
         <TextView
-
             android:id="@+id/title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -31,6 +30,7 @@
             android:textColor="#333333"
             android:textSize="18sp" />
         <TextView
+            android:layout_marginBottom="16dp"
             android:visibility="gone"
             android:id="@+id/message"
             android:layout_width="wrap_content"
@@ -46,6 +46,7 @@
             android:background="@null"
             />
         <LinearLayout
+            android:layout_marginBottom="16dp"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:orientation="vertical"
@@ -60,7 +61,6 @@
             android:id="@+id/topDevider"
             android:layout_width="match_parent"
             android:layout_height="1px"
-            android:layout_marginTop="16dp"
             android:background="#E4E4E4" />
 
         <LinearLayout
