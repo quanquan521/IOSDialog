@@ -13,4 +13,4 @@
 > ### 使用
   
   
-    CommonViewDialog(this).setMessage("这是一个dialog！").setNegtive("取消").setPositive("确定").show()
+    val dialog=CommonViewDialog(this).setMessage("这是一个dialog！").setNegtive("取消").setPositive("确定").show()
