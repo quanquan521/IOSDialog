@@ -13,19 +13,4 @@
 > ### 使用
   
   
-      var  dialog= CommonViewDialog(this)
-        dialog.setTitle("提示")
-        dialog.setMessage("这是一个dialog！")
-        dialog.setNegtive("取消")
-        dialog.setPositive("确定")
-        dialog.show()
-        val  listener=object :CommonViewDialog.OnClickBottomListener{
-            override fun onPositiveClick() {
-                dialog.dismiss() 
-            }
-
-            override fun onNegtiveClick() {
-                dialog.dismiss()
-            }
-        }
-        dialog.setOnClickBottomListener(listener)
+    CommonViewDialog(this).setMessage("这是一个dialog！").setNegtive("取消").setPositive("确定").show()
