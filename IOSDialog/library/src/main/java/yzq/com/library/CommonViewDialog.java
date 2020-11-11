@@ -50,11 +50,15 @@ public class CommonViewDialog extends Dialog {
 
 
     private String title,positive,negtive,message;
+    private  OnPositiveClickListener onPositiveClickListener;
+    private  OnNegtiveClickListener onNegtiveClickListener;
 
-    public interface OnDialogUtilListener {
-        void onDialogPositiveClick();
+    public interface OnPositiveClickListener {
+        void onClick();
     }
-
+    public interface OnNegtiveClickListener {
+        void onClick();
+    }
     /**
      * 底部是否只有一个按钮
      */
@@ -101,6 +105,10 @@ public class CommonViewDialog extends Dialog {
                 if ( onClickBottomListener!= null) {
                     onClickBottomListener.onPositiveClick();
                 }
+                if (onPositiveClickListener!=null){
+                    onPositiveClickListener.onClick();
+                    dismiss();
+                }
             }
         });
         //设置取消按钮被点击后，向外界提供监听
@@ -109,6 +117,10 @@ public class CommonViewDialog extends Dialog {
             public void onClick(View v) {
                 if ( onClickBottomListener!= null) {
                     onClickBottomListener.onNegtiveClick();
+                }
+                if (onNegtiveClickListener!=null){
+                    onNegtiveClickListener.onClick();
+                    dismiss();
                 }
             }
         });
@@ -211,17 +223,21 @@ public class CommonViewDialog extends Dialog {
         public void onNegtiveClick();
     }
 
-    public void getMessage(final OnDialogUtilListener listener) {
-       listener.onDialogPositiveClick();
-
+    public CommonViewDialog setOnPositiveClickListener(final OnPositiveClickListener listener) {
+       this.onPositiveClickListener=listener;
+       return this;
     }
-
+    public CommonViewDialog setOnNegtiveClickListener(final OnNegtiveClickListener listener) {
+        this.onNegtiveClickListener=listener;
+        return this;
+    }
     public String getTitle() {
         return title;
     }
 
     public CommonViewDialog setTitle(String title) {
         this.title = title;
+        refreshView();
         return this ;
     }
 
@@ -246,6 +262,12 @@ public class CommonViewDialog extends Dialog {
     public View getView() {
         return view;
     }
+
+    public Bottom isSingle() {
+        return style;
+    }
+
+
     public CommonViewDialog setSingle(Bottom b) {
         style = b;
         return this ;
@@ -257,10 +279,12 @@ public class CommonViewDialog extends Dialog {
     }
     public CommonViewDialog setCancelButtonColor(int color) {
         this.cancelButtonColor=color;
+        refreshView();
         return this ;
     }
     public CommonViewDialog setSureButtonColor(int color) {
         this.sureButtonColor=color;
+        refreshView();
         return this ;
     }
 
@@ -270,6 +294,7 @@ public class CommonViewDialog extends Dialog {
 
     public CommonViewDialog setMessage(String message) {
         this.message = message;
+        refreshView();
         return this;
     }
 
