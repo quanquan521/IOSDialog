@@ -129,7 +129,7 @@ public class CommonViewDialog extends Dialog {
     /**
      * 初始化界面控件的显示数据
      */
-    private void refreshView() {
+    public void refreshView() {
         //如果用户自定了title和message
         if (!TextUtils.isEmpty(title)) {
             titleTv.setText(title);
@@ -187,7 +187,6 @@ public class CommonViewDialog extends Dialog {
     public void show() {
         super.show();
         refreshView();
-
     }
 
     /**
@@ -237,7 +236,6 @@ public class CommonViewDialog extends Dialog {
 
     public CommonViewDialog setTitle(String title) {
         this.title = title;
-        refreshView();
         return this ;
     }
 
@@ -279,12 +277,10 @@ public class CommonViewDialog extends Dialog {
     }
     public CommonViewDialog setCancelButtonColor(int color) {
         this.cancelButtonColor=color;
-        refreshView();
         return this ;
     }
     public CommonViewDialog setSureButtonColor(int color) {
         this.sureButtonColor=color;
-        refreshView();
         return this ;
     }
 
@@ -294,7 +290,6 @@ public class CommonViewDialog extends Dialog {
 
     public CommonViewDialog setMessage(String message) {
         this.message = message;
-        refreshView();
         return this;
     }
 
