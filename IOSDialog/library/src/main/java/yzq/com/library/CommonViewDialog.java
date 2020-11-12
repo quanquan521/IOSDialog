@@ -160,7 +160,7 @@ public class CommonViewDialog extends Dialog {
             negtiveBn.setVisibility(View.VISIBLE);
             columnLineView.setVisibility(View.VISIBLE);
         }else {
-            topDevider.setVisibility(View.GONE);
+            topDevider.setVisibility(View.INVISIBLE);
             columnLineView.setVisibility(View.GONE);
             negtiveBn.setVisibility(View.GONE);
             positiveBn.setVisibility(View.GONE);
