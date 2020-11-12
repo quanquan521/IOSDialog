@@ -129,7 +129,7 @@ public class CommonViewDialog extends Dialog {
     /**
      * 初始化界面控件的显示数据
      */
-    public void refreshView() {
+    public void refreshView()   {
         //如果用户自定了title和message
         if (!TextUtils.isEmpty(title)) {
             titleTv.setText(title);
